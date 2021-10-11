@@ -18,6 +18,10 @@ section.call-to-action,
 .date-post,
 .team-list .small-border,
 .de-team-list .small-border,
+.btn-line:hover,
+a.btn-line:hover,
+.btn-line.hover,
+a.btn-line.hover,
 .owl-arrow span,
 .de-progress .progress-bar,
 #btn-close-x:hover,
@@ -33,7 +37,7 @@ section.call-to-action,
 #services-list li a:hover,
 .timeline .tl-block .tl-line,
 .de_tab.tab_style_2 .de_nav li.active span,
-.de_tab.tab_methods.style-2 .de_nav li.active span,
+.de_tab.tab_steps.style-2 .de_nav li.active span,
 .feature-box-small-icon.style-2 .number.bg-color,
 .owl-custom-nav .btn-next:before,
 .owl-custom-nav .btn-prev:before,
@@ -120,6 +124,7 @@ a.btn-line:after,
 a.btn-text:after,
 .separator span i,
 address span strong,
+.de_tab.tab_steps .de_nav li span:hover,
 .widget_tags li a,
 .dark .btn-line:after,
 .dark a.btn-line:after,
@@ -186,9 +191,7 @@ address.s1 span i,
 .dark-scheme .demo-icon-wrap i,
 .dark-scheme .demo-icon-wrap-s2 span,
 .de_tab .de_nav li span,
-.dark-scheme .small-border,
-.profile_username,
-.de_tab.tab_methods .de_nav li.active span i {
+.dark-scheme .small-border {
     color: var(--secondary-color);
 }
 
@@ -206,8 +209,6 @@ a.btn-main,
 .testimonial-color .item:nth-child(2n) blockquote:before,
 a.btn-main.bg-color-2,
 a.btn-main.invert,
-#mainmenu li li a:hover,
-#mainmenu ul li:hover>a,
 .icon-box.invert:hover,
 #form_subscribe #btn-subscribe i.bg-color-secondary,
 #jpreBar,
@@ -228,13 +229,7 @@ a.btn-main.invert,
 .owl-dot.active,
 .p_list_pp i,
 .author_list_pp img,
-.activity-filter li.active,
-.dark-scheme .de_countdown.bg-color-secondary,
-.btn-line:hover,
-a.btn-line:hover,
-.btn-line.hover,
-a.btn-line.hover,
-.de_form input[type="checkbox"]:checked + label:before{
+.activity-filter li.active {
     background: var(--secondary-color);
 }
 
@@ -333,28 +328,8 @@ a.btn-border.btn-invert,
     border-color: var(--primary-color);
 }
 
-.de_countdown,
-.container-timeline ul li::before,
-.de_tab.tab_methods .de_nav li.active span {
+.container-timeline ul li::before {
     border-color: var(--secondary-color);
-}
-
-.author_list_pp:hover img{
-    -webkit-box-shadow: 0px 0px 0px 2px rgba(var(--secondary-color-rgb), 1);
-    -moz-box-shadow: 0px 0px 0px 2px rgba(var(--secondary-color-rgb), 1);
-    box-shadow: 0px 0px 0px 2px rgba(var(--secondary-color-rgb), 1);
-}
-
-.form-border input[type=text]:focus,
-.form-border textarea:focus,
-.form-underline input[type=email]:focus,
-.form-border input[type=date]:focus,
-.form-border select:focus,
-#quick_search:hover,
-.items_filter .dropdown:hover{
-    webkit-box-shadow: 0px 0px 0px 4px rgba(var(--secondary-color-rgb), .3);
-    -moz-box-shadow: 0px 0px 0px 4px rgba(var(--secondary-color-rgb), .3);
-    box-shadow: 0px 0px 0px 4px rgba(var(--secondary-color-rgb), .3);
 }
 
 .container-timeline ul li,
@@ -362,9 +337,8 @@ blockquote {
     border-left-color: var(--primary-color);
 }
 
-header #mainmenu a span,
-header.transparent #mainmenu a span,
-.de-grey #subheader h1 {
+header.header-light #mainmenu a span,
+header.transparent #mainmenu a span {
     border-bottom-color: var(--secondary-color);
 }
 

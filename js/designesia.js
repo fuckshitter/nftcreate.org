@@ -229,35 +229,13 @@
       * plugin | owl carousel
       * --------------------------------------------------*/
      function load_owl() {
-        jQuery("#items-carousel").owlCarousel({
-            center: false,
-            items:4,
-            loop:true,
-            margin:25,
-            nav:true,
-            navText : ["<i class='fa fa-chevron-left'></i>","<i class='fa fa-chevron-right'></i>"],
-            dots:false,
-            responsive:{
-                1000:{
-                    items:4
-                },
-                600:{
-                    items:2
-                },
-                0:{
-                    items:1
-                }
-            }
-         });
-
         jQuery("#collection-carousel").owlCarousel({
             center: false,
             items:4,
             loop:true,
             margin:25,
-            nav:true,
-            navText : ["<i class='fa fa-chevron-left'></i>","<i class='fa fa-chevron-right'></i>"],
-            dots:false,
+            nav:false,
+            dots:true,
             responsive:{
                 1000:{
                     items:4
@@ -269,81 +247,6 @@
                     items:1
                 }
             }
-         });
-
-        jQuery("#collection-carousel-alt").owlCarousel({
-            center: false,
-            items:5,
-            loop:true,
-            margin:25,
-            nav:true,
-            navText : ["<i class='fa fa-chevron-left'></i>","<i class='fa fa-chevron-right'></i>"],
-            dots:false,
-            responsive:{
-                1000:{
-                    items:5
-                },
-                600:{
-                    items:2
-                },
-                0:{
-                    items:1
-                }
-            }
-         });
-
-         jQuery("#item-carousel-big").owlCarousel({
-            loop:true,
-            margin:25,
-            nav:false,
-            dots:false,
-            responsive:{
-                1000:{
-                    items:3
-                },
-                600:{
-                    items:2
-                },
-                0:{
-                    items:1
-                }
-            }
-         });
-
-         jQuery("#item-carousel-big-type-2").owlCarousel({
-            loop:true,
-            margin:25,
-            nav:false,
-            dots:false,
-            responsive:{
-                1000:{
-                    items:1
-                },
-                600:{
-                    items:1
-                },
-                0:{
-                    items:1
-                }
-            }
-         });
-
-         var owl = $('#item-carousel-big');
-         owl.owlCarousel();
-         $('.d-carousel .d-arrow-right').click(function() {
-             owl.trigger('next.owl.carousel');
-         })
-         $('.d-carousel .d-arrow-left').click(function() {
-             owl.trigger('prev.owl.carousel');
-         });
-
-         var owl_2 = $('#item-carousel-big-type-2');
-         owl_2.owlCarousel();
-         $('.d-carousel .d-arrow-right').click(function() {
-             owl_2.trigger('next.owl.carousel');
-         })
-         $('.d-carousel .d-arrow-left').click(function() {
-             owl_2.trigger('prev.owl.carousel');
          });
 
 		 jQuery("#event-carousel").owlCarousel({
@@ -1529,14 +1432,6 @@
          jQuery(".nav-exit").on("click", function() {
              $.magnificPopup.close();
          });
-         // carousel hover
-         jQuery(".d-carousel").on("mouseenter", function() {
-             jQuery('.d-arrow-left').fadeTo(50, 1);
-             jQuery('.d-arrow-right').fadeTo(50, 1);
-         }).on("mouseleave", function() {
-             jQuery('.d-arrow-left').fadeTo(50, 0);
-             jQuery('.d-arrow-right').fadeTo(50, 0);
-         })
          // --------------------------------------------------
          // navigation for mobile
          // --------------------------------------------------
@@ -1667,26 +1562,7 @@
              $('.accordion-section-title').removeClass('active').filter(this).addClass('active');
              $('.accordion-section-content').slideUp(300).filter(currentAttrvalue).slideDown(300);
          }
-        });
-
-        $('#get_file,#get_file_2').click(function(){
-            $('#upload_file').click();
-         });
-
-        $('#upload_file').change(function(){
-            var file = $(this).val();
-            var filename = file.replace(/^.*\\/, "");
-            $('#file_name').text(filename);
-         });
-
-        jQuery.each(jQuery('textarea[data-autoresize]'), function() {
-            var offset = this.offsetHeight - this.clientHeight;
-         
-            var resizeTextarea = function(el) {
-                jQuery(el).css('height', 'auto').css('height', el.scrollHeight + offset);
-            };
-            jQuery(this).on('keyup input', function() { resizeTextarea(this); }).removeAttr('data-autoresize');
-        });
+     });
 		
 
          /* --------------------------------------------------
